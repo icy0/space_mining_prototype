@@ -1,0 +1,813 @@
+[gd_scene load_steps=9 format=3 uid="uid://vcr24re3u8t6"]
+
+[ext_resource type="Texture2D" uid="uid://g5h37ik6anrp" path="res://Assets/Tick.png" id="1_2bdcw"]
+[ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_v3xuk"]
+[ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="2_grvvc"]
+[ext_resource type="Texture2D" uid="uid://0x63h41cahfs" path="res://Assets/Low_Stardust.png" id="3_2gcsh"]
+[ext_resource type="Script" path="res://Scripts/PlayerCamera.gd" id="3_33i2g"]
+[ext_resource type="Texture2D" uid="uid://dhvxkce2mtd1r" path="res://Assets/Medium_Stardust.png" id="3_pg1k4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4g7im"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jo60v"]
+radius = 4.0
+
+[node name="Player" type="Node2D"]
+position = Vector2(581, 305)
+
+[node name="BackgroundTenthSpeed" type="Node2D" parent="."]
+visible = false
+script = ExtResource("2_grvvc")
+speed_modifier = 0.1
+
+[node name="Sprite2D33" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D34" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D35" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D36" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D37" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D38" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D39" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D40" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D41" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D42" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D43" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D44" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D45" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D46" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D47" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D48" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D49" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D50" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D51" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D52" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D53" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D54" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D55" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D56" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D57" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D58" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D59" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D60" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D61" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D62" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D63" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D64" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D17" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D18" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D19" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D20" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D21" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D22" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D23" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D24" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D25" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D26" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D27" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(768, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D28" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(896, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D29" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D30" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D31" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(640, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D32" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(512, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D9" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D10" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D11" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D12" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D13" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D14" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D15" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D16" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D7" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(256, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D8" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(384, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(0, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundTenthSpeed"]
+position = Vector2(128, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundTenthSpeed"]
+texture = ExtResource("3_2gcsh")
+
+[node name="BackgroundHalfSpeed" type="Node2D" parent="."]
+visible = false
+script = ExtResource("2_grvvc")
+speed_modifier = 0.5
+
+[node name="Sprite2D33" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D34" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D35" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D36" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D37" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D38" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D39" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D40" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D41" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D42" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D43" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D44" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D45" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D46" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D47" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D48" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D49" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D50" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D51" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D52" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D53" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D54" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 896)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D55" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D56" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 768)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D57" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D58" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D59" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D60" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D61" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D62" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 640)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D63" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D64" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 512)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D17" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D18" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D19" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D20" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D21" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D22" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D23" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D24" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D25" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D26" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D27" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(768, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D28" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(896, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D29" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D30" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D31" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(640, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D32" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(512, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D9" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D10" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D11" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D12" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D13" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D14" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 384)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D15" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D16" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 256)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D5" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D6" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D7" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(256, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D8" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(384, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(0, 128)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundHalfSpeed"]
+position = Vector2(128, 0)
+texture = ExtResource("3_pg1k4")
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundHalfSpeed"]
+texture = ExtResource("3_pg1k4")
+
+[node name="BackgroundFullSpeed" type="Node2D" parent="."]
+visible = false
+position = Vector2(-401, -165)
+
+[node name="Sprite2D33" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D34" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D35" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D36" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D37" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D38" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D39" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D40" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D41" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D42" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D43" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D44" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D45" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D46" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D47" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D48" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D49" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D50" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D51" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D52" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D53" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D54" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 896)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D55" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D56" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 768)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D57" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D58" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D59" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D60" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D61" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D62" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 640)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D63" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D64" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 512)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D17" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D18" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D19" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D20" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D21" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D22" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D23" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D24" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D25" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D26" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D27" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(768, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D28" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(896, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D29" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D30" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D31" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(640, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D32" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(512, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D9" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D10" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D11" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D12" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D13" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D14" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 384)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D15" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D16" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 256)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D7" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(256, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D8" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(384, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(0, 128)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundFullSpeed"]
+position = Vector2(128, 0)
+texture = ExtResource("3_2gcsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundFullSpeed"]
+texture = ExtResource("3_2gcsh")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_4g7im")
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("1_v3xuk")
+
+[node name="ShipSprite" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_2bdcw")
+
+[node name="Collider" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_jo60v")
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
+script = ExtResource("3_33i2g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
